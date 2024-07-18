@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using PTGKDotNetCoreBath4.ConsoleApp.AdodotnetExample;
 using PTGKDotNetCoreBath4.ConsoleApp.DapperExample;
+using PTGKDotNetCoreBath4.ConsoleApp.EfcoreExample;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
@@ -16,6 +17,8 @@ Console.WriteLine("Hello, World!");
 //adoDotNetCRUD.Delete(72);
 //Console.ReadKey();
 
-DapperCRUD dapperCRUD = new DapperCRUD();
-dapperCRUD.Run();
+//DapperCRUD dapperCRUD = new DapperCRUD();
+//dapperCRUD.Run();
+EfcoreCRUD efcoreCRUD = new EfcoreCRUD();
+efcoreCRUD.Run();
 
