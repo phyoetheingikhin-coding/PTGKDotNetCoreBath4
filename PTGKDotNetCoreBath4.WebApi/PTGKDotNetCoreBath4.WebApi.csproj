@@ -17,4 +17,8 @@
 
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\PTGKDotNetCoreBath4.Shared\PTGKDotNetCoreBath4.Shared.csproj" />
+	</ItemGroup>
+
 </Project>
