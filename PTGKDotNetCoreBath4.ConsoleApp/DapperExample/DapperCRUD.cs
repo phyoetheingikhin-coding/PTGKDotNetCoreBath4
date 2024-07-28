@@ -1,6 +1,6 @@
 ﻿using Dapper;
-using PTGKDotNetCoreBath4.ConsoleApp.Dto;
-using PTGKDotNetCoreBath4.ConsoleApp.Service;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.Dto;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.Service;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PTGKDotNetCoreBath4.ConsoleApp.DapperExample;
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.DapperExample;
 
 public class DapperCRUD
 {

@@ -1,12 +1,12 @@
 ﻿using Dapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PTGKDotNetCoreBath4.Shared;
-using PTGKDotNetCoreBath4.WebApi.Models;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.Shared;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi.Models;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace PTGKDotNetCoreBath4.WebApi.Controllers;
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

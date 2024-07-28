@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using PTGKDotNetCoreBath4.ConsoleApp.AdodotnetExample;
-using PTGKDotNetCoreBath4.ConsoleApp.DapperExample;
-using PTGKDotNetCoreBath4.ConsoleApp.EfcoreExample;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.AdodotnetExample;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.DapperExample;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.EfcoreExample;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PTGKDotNetCoreBath4.ConsoleApp.Dto;
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.Dto;
 
 [Table("Tbl_Customer")]
 public class CustomerDto

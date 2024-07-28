@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PTGKDotNetCoreBath4.ConsoleApp.AdodotnetExample
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.AdodotnetExample
 {
     public class AdoDotNetCRUD
     {

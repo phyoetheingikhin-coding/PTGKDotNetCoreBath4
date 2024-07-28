@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PTGKDotNetCoreBath4.WebApi.Db;
-using PTGKDotNetCoreBath4.WebApi.Models;
-namespace PTGKDotNetCoreBath4.WebApi.Controllers
+using PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi.Db;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi.Models;
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace PTGKDotNetCoreBath4.Shared
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.Shared
 {
     public class DapperService
     {

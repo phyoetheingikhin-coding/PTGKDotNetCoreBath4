@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PTGKDotNetCoreBath4.WebApi
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi
 {
     internal static class ConnectionString
     {

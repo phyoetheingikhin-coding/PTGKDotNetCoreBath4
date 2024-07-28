@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi.Models
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.Models
 {
     [Table("Tbl_Customer")]
     public class CustomerModel

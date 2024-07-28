@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PTGKDotNetCoreBath4.Shared;
-using PTGKDotNetCoreBath4.WebApi.Models;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.Shared;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi.Models;
 using System.Data;
 using System.Data.SqlClient;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
-namespace PTGKDotNetCoreBath4.WebApi.Controllers
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -73,16 +74,9 @@ namespace PTGKDotNetCoreBath4.WebApi.Controllers
            // string getQuery = "select count(*) from Tbl_Customer where CustomerId=@CustomerId";
             string getQuery = "select * from Tbl_Customer where CustomerId=@CustomerId";
 
-            SqlConnection connection = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
-            connection.Open();
+            var item = _adoDotNetService.QueryFirstOrDefault<CustomerModel>(getQuery, new AdoDotNetParameter("@CustomerId", id));
 
-            SqlCommand cmd = new SqlCommand(getQuery, connection);
-            cmd.Parameters.AddWithValue("@CustomerId", id);
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sqlDataAdapter.Fill(dt);
-
-            if (dt.Rows.Count == 0)
+            if (item is null)
             {
                 return NotFound("No data found");
             }
@@ -100,15 +94,13 @@ namespace PTGKDotNetCoreBath4.WebApi.Controllers
                 ,[Gender] = @Gender
                 ,[CustomerCode] = @CustomerCode
             WHERE CustomerId=@CustomerId";
-            SqlCommand updatecmd = new SqlCommand(updateQuery, connection);
-            updatecmd.Parameters.AddWithValue("@CustomerId", id);
-            updatecmd.Parameters.AddWithValue("@CustomerName", customer.CustomerName);
-            updatecmd.Parameters.AddWithValue("@PhoneNo", customer.PhoneNo);
-            updatecmd.Parameters.AddWithValue("@Address", customer.Address);
-            updatecmd.Parameters.AddWithValue("@Gender", customer.Gender);
-            updatecmd.Parameters.AddWithValue("@CustomerCode", customer.CustomerCode);
-            int result = updatecmd.ExecuteNonQuery();
-            connection.Close();
+            int result = _adoDotNetService.Execute(updateQuery,
+                new AdoDotNetParameter("@CustomerName", customer.CustomerName),
+                new AdoDotNetParameter("@PhoneNo", customer.PhoneNo),
+                new AdoDotNetParameter("@Address", customer.Address),
+                new AdoDotNetParameter("@Gender", customer.Gender),
+                new AdoDotNetParameter("@CustomerCode", customer.CustomerCode)
+                );
 
             var message = result > 0 ? "Updating Successful!" : "Updadting Failed!";
             return Ok(message);

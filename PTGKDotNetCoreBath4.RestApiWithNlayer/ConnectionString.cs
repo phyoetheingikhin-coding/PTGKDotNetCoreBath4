@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.Service
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer
 {
     internal static class ConnectionString
     {
@@ -13,7 +13,7 @@ namespace PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.Service
         {
             DataSource = ".",
             InitialCatalog = "PractiseDb",
-            UserID= "sa",
+            UserID = "sa",
             Password = "sasa@123",
             TrustServerCertificate = true,
         };

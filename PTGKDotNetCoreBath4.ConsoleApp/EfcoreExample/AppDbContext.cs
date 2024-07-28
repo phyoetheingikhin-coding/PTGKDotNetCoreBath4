@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PTGKDotNetCoreBath4.ConsoleApp.Dto;
-using PTGKDotNetCoreBath4.ConsoleApp.Service;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.Dto;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PTGKDotNetCoreBath4.ConsoleApp.EfcoreExample
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.EfcoreExample
 {
     internal class AppDbContext:DbContext
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi.Models;
+using PTGKDotNetCoreBath4.RestApiWithNlayer.Models;
 
-namespace PTGKDotNetCoreBath4.RestApiWithNlayer.WebApi.Db
+namespace PTGKDotNetCoreBath4.RestApiWithNlayer.Db
 {
     public class AppDbContext : DbContext
     {
