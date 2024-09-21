@@ -7,7 +7,8 @@ using System.Data.Common;
 using System.Data.SqlClient;
 
 Console.WriteLine("Hello, World!");
-//AdoDotNetCRUD adoDotNetCRUD = new AdoDotNetCRUD();
+AdoDotNetCRUD adoDotNetCRUD = new AdoDotNetCRUD();
+adoDotNetCRUD.SampleTransaction();
 //adoDotNetCRUD.Read();
 //adoDotNetCRUD.Create("Aye Aye","09364522868","Yangon","Female","C000230");
 //adoDotNetCRUD.Read();
@@ -15,10 +16,10 @@ Console.WriteLine("Hello, World!");
 //adoDotNetCRUD.Update(333, "Aye Aye", "09364522868", "Yangon", "Female", "C000230");
 //adoDotNetCRUD.Delete(1);
 //adoDotNetCRUD.Delete(72);
-//Console.ReadKey();
+Console.ReadKey();
 
 //DapperCRUD dapperCRUD = new DapperCRUD();
 //dapperCRUD.Run();
-EfcoreCRUD efcoreCRUD = new EfcoreCRUD();
-efcoreCRUD.Run();
+//EfcoreCRUD efcoreCRUD = new EfcoreCRUD();
+//efcoreCRUD.Run();
 

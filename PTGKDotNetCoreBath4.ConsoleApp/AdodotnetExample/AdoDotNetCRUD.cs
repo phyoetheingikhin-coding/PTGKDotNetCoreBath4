@@ -130,5 +130,44 @@ namespace PTGKDotNetCoreBath4.RestApiWithNlayer.ConsoleApp.AdodotnetExample
 
 
         }
+
+        public void SampleTransaction()
+        {
+            string connectionString = "Data Source=.;Initial Catalog=PractiseDb;User Id=sa;Password=sasa@123";
+
+            string insertQuery1 = "Insert into Tbl_Order (OrderCode, OrderName, CustomerName) Values(@orderCode,@orderName,@customerName1)";
+            string insertQuery2 = "Insert into Tbl_Customer (CustomerName, CustomerCode, Gender, Address, PhoneNo) Values(@customerName, @customerCode, @gender, @address, @phoneNo)";
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            SqlTransaction transaction = connection.BeginTransaction();
+            try
+            {
+                SqlCommand cmd1 = new SqlCommand(insertQuery1, connection, transaction);
+                cmd1.Parameters.AddWithValue("@orderCode", "testingCode");
+                cmd1.Parameters.AddWithValue("@orderName", "testingName");
+                cmd1.Parameters.AddWithValue("@customerName1", "testingCusName");
+                cmd1.ExecuteNonQuery();
+                Console.WriteLine("Insert table order successful");
+
+                SqlCommand cmd2 = new SqlCommand(insertQuery2, connection, transaction);
+                cmd2.Parameters.AddWithValue("@customerCode1", "testingCode");
+                cmd2.Parameters.AddWithValue("@gender", "testingGender");
+                cmd2.Parameters.AddWithValue("@address", "testingAddress");
+                cmd2.Parameters.AddWithValue("@phoneNo", "testingPhoneNo");
+                cmd2.Parameters.AddWithValue("@customerName", "testingCusName");
+                cmd2.ExecuteNonQuery();
+                Console.WriteLine("Insert table customer successful");
+
+                transaction.Commit();
+                Console.WriteLine("Transaction committed successfully.");
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                Console.WriteLine("Transaction rolled back. Error: " + ex.Message);
+            }
+
+        }
     }
 }
